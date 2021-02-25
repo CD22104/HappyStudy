@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        在js中所有的数值都是Number类型
+        包括整数和浮点数（小数）
+        最大值为1.7976931348623157e+308
+        如果表示的值超过最大值，则返回一个Infinity
+       */ 
+        var a=123;
+        var b="123";
+        // 两者结果都为字符串
+        /*
+        可以用一个运算符typeof来检查一个变量的类型
+            语法： typeof 变量
+            例：在控制台中显示，会返回数值类型
+        */ 
+        alert("love you");
+        document.write(typeof a);
+        document.write(Number.MAX_VALUE);
+        document.write("tai\n");
+        var q=Infinity;
+        // Infinity表示正无穷，-Infinity表示负无穷，也属于Number
+        document.write("abd"*"djk");
+        //控制台返回NaN表示not a number,NaN的类型也是NUmber    
+        q=NaN;
+        document.write(Number.MIN_VALUE);
+        // 输出5e-324，指的是大于0的最小值
+        var c=0.1+0.2;
+        // 如果用浮点数进行计算，可能得到一个不精确的结果
+    </script>
+</head>
+
+<body>
+
+</body>
+</html>
