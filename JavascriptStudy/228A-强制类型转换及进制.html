@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        强制类型转换
+        指将一个数据类型转换成其他的数据类型
+        类型转换主要指，将其他的数据类型转换为String Number Boolean
+        */
+       var a=123;
+       document.write(typeof a);
+       document.write(a);
+       /* 
+       1.将其他的数据类型转换为String
+       方式一： 调用被转换数据类型的toString方法
+            特征：不改变原来的数据类型
+            解决方法：赋值给另一个变量
+            注意：null和undefined没有tostring方法，若调用会报错
+       */
+       a.toString();
+        document.write(typeof a);
+        a=a.toString();
+        document.write(typeof a);
+        /* 
+        方法二：调用String函数，并将转换的数据作为参数传递给该函数
+            注意：使用String函数做强制类型转换时
+                实际上对number和Boolean相当于调用tostring
+                对null和undefined转换为“null\undefined”
+        */
+       var b=123;
+       b=String(b);
+       /* 
+       2.将其他的数据类型转换为Number
+        方法一：使用Number函数；用法类同String函数
+            a.字符串转为数值：1.若为纯数字，直接转换 
+                        2.若不是纯数字，则转换为NaN
+                        3.若字符串为空串，或全为空格的字符串，则转换为0
+            b.Boolean转为数值：1.true转换为1；2.false转为0
+            c.Null转为数值：结果是0
+            d.Undefined转为数值：结果是NaN
+        方法二:专门用来对付字符串
+            a.parseInt()：把字符串中有效的数字转换为整数
+            b.parseFloat()：把字符串转换为浮点数
+            parseFloat()不仅能取出整数还能取出小数
+        注意：如果对非String使用上面两个函数会将其转换为String再操作
+       
+        */
+        var c="123";
+        document.write(typeof c);
+        c=Number(c);
+        var d="123px";
+        parseInt(d);//123
+        d="234.345";
+        parseInt(d);//234
+        parseFloat(d);//234.345
+        d="234.553.345";
+        parseFloat(d);//234.553
+        //小数取整
+        var e=123.345;
+        parseInt(e);
+        /* 
+        进制：“070”这种字符有些会作为8进制解析，有些会作为10进制解析
+        */
+       var f="070";
+       parseInt(f,10);//第二个参数指定数字的进制
+        /* 
+        3.将其他的数据类型转换成Boolean
+        方法：使用Boolean函数
+            数字转换为Boolean，除了0都是true
+            字符串转换为Boolean，除了空串都是true
+            null和undefined都是false
+            对象也会转换为true
+        */
+        var g="234";
+        Boolean(g);//ture
+        g="-234";
+        Boolean(g);//ture
+    </script>
+</body>
+</html>
