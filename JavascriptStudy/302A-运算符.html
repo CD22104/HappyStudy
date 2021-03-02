@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        运算符也叫操作符
+        通过运算符可以对一个或多个值进行运算
+        可以返回一个结果
+        比如typeof就是一个运算符，可以获得一个值的类型,该值的类型以字符串的形式返回
+         */
+         var a=123;
+         var resualt=typeof a;
+         document.write(typeof resualt);
+        /* 
+        算数运算符：
+        +:当对非Number类型的值进行运算时，会将这些值转换为Number然后进行运算
+            任何数和NaN进行计算都得NaN
+            若两字符串相加，则拼接后返回
+            任何值和字符串做加法运算，都先转换为字符串再拼接
+        -:全部转换成Number再计算
+        *:乘法，全部转换成Number再计算
+        /:除法，全部转换成Number再计算
+        %:取余运算，取余数
+        注意：
+         */
+        resualt=true+false;//1
+        resualt=true+null;//1
+        resualt=NaN+1;
+        resualt="123"+"345";
+        resualt="234"+2;
+        resualt=true+"2";//"true2"
+        document.write(resualt);
+        resualt=123;
+        resualt=resualt+"";
+        //转换为字符串的另一种形式：隐式类型转换
+        //实际上也是调用了String函数
+        resualt=null+"";//"null"
+        document.write(typeof resualt);
+        
+        resualt=1+2+"3";//"33"
+        resualt="1"+"2"+"3";//123
+        //从左往右进行计算
+
+        resualt=100-"1";//99
+
+        resualt="123";
+        resualt=resualt-0;
+        //String转换为Number，不能用+0
+        
+        /* 
+        一元运算符（需要两个数为二元运算符如+-）
+        只需要一个操作数，如typeof
+        +：正号，不会对数字产生任何影响
+        -：负号，可以对数字进行符号的取反
+        注意：对于非Number类型的值
+            会先转换为Number，然后再进行运算
+            可以将其他的数据类型加一个+来转换为Number
+            它的原理和Number();一样
+        */
+       var b=true;
+       b=-b;
+       document.write(b);
+       var c="18";
+       c=+c;
+       document.write(typeof c);//可以将字符串变成数字
+        var result=1+"2"+3;
+        document.write(result);//123
+        // result=1++"2"+3;//6
+
+        /* 
+        自增++和自减-- 
+        */
+    </script>
+</body>
+</html>

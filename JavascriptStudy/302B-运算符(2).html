@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 
+        逻辑运算符
+        ！非,对一个布尔值进行取反
+        
+        && 与，都为true才为true，短路
+        *    与运算如果两个值都为true则返回后面那个值
+             与运算如果两个值中有flase则返回 靠前的false，短路原理
+        || 或，都为false才为false，短路
+             或运算第一个值为true直接返回
+             若第一个值为false则直接返回第二个值
+        如果有非布尔值进行运算，则将他们变成布尔值再运算
+        */
+       var a=true;
+       a=!a;
+       a=9;
+        //a=!a;//false
+       document.write(a);
+       true&&alert("123");
+        a=!!a;//true，可以将其转换为布尔值
+        var result=2&&1;//1
+        result=1&&2;//2
+
+        /* 
+            赋值运算符
+            =：可以将符号右侧的值赋给左侧的变量
+            +=
+            -=
+            *=
+            /=
+        */
+       var a=123;
+        /* 
+        关系运算符，可以比较两个值的大小关系
+        成立为true，否则为false
+        ><
+        非数值比较时
+            会将其转换为数字再比较
+            任何值与NaN做比较都是false
+            若符号两边都是字符串，则会分别比较两边字符串Unicode编码
+        */
+        a=5>4;
+        document.write(a);//true
+        var d=Number("Hello");
+        document.write(d);
+        document.write("\n");
+    
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
